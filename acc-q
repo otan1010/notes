@@ -1,2 +1,3 @@
 Could dsgrep iterate over a dataset chain?
 Could dsinfo/dsgrep refer to job name ('import') instead of the explicit job id ('TEST-0')?
+Is there a difference between linking jobs and datasets?
