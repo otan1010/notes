@@ -4,7 +4,7 @@ Prerequisite: You've followed the instructions in acc_install.
 -------- For CentOS --------
 ----------------------------
 yum groupinstall 'Development Tools'
-yum install python-devel python36-devel zlib-devel git python-virtualenv python34-virtualenv
+yum install python-devel python34-devel zlib-devel git python-virtualenv python34-virtualenv
 
 ----------------------------
 -- 1. Verify installation --
