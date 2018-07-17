@@ -23,7 +23,8 @@ By default there is an example in the dev folder, which we will try to run now t
 -------------------------
 -- 2. Import some data --
 -------------------------
-The Accelerator has a number of standard methods which are located under accelerator_project_skeleton/accelerator/standard_methods. We'll now use one of those methods (csvimport) to import a data set.
+The Accelerator has a number of standard methods which are located under accelerator_project_skeleton/accelerator/standard_methods.
+We'll now use one of those methods (csvimport) to import a data set.
 
 First, however, we'll create a new folder structure from which we'll invoke csvimport.
 - Exit (ctrl+c) ./daemon.py in the other terminal window so that the accelerator is not running
@@ -39,8 +40,10 @@ First, however, we'll create a new folder structure from which we'll invoke csvi
 -- This will make sure that the accelerator looks for code in the new folder.
 -- We can also change where the accelerator looks for data, so we'll do that as well:
 -- change the "source_directory=/some/other/path" to "source_directory=${HOME}".
--- This will make the accelerators import methods look for data in your users home folder, as specified by the unix environment variable $HOME.
-- Then we need to create the dummy data, so create a file named 'test.csv' under your $HOME folder (run 'echo $HOME' in the terminal if you're unsure where that is). Fill the file with some dummy data, as such:
+-- This will make the accelerators import methods look for data in your users home folder,
+	as specified by the unix environment variable$HOME.
+- Then we need to create the dummy data, so create a file named 'test.csv' under your $HOME folder (run 'echo $HOME' in the terminal if
+	you're unsure where that is). Fill the file with some dummy data, as such:
 
 col1,column2,col3
 value1,value2,75431
@@ -57,18 +60,21 @@ value1,value4,323243
 def main(urd):
 	urd.build('csvimport', options=dict(filename='test.csv'))
 
-This will insert an object of the urd class into the main function, which will invoke the standard method 'csvimport' to run on the file you just created.
+This will insert an object of the urd class into the main function, which will invoke the standard method 'csvimport' to run on
+	the file you just created.
 
 - Run ./daemon.py in the other terminal again to start the accelerator
 - cd into accelerator_project_skeleton/accelerator and run the following: "./automatarunner.py"
-- Note that you'll get an error saying: <No automata "automata" found>. This is because we named our automata file  'automata_example1.py', meaning we'll have to specify the name if the accelerator is to find it.
+- Note that you'll get an error saying: <No automata "automata" found>. This is because we named our automata file
+	'automata_example1.py', meaning we'll have to specify the name if the accelerator is to find it.
 - Instead run "./automatarunner.py example1", which should run without issues.
 - Voilá, you've imported the file 'test.csv' into the accelerator!
 
 --------------------------
 -- 3. Explore some data --
 --------------------------
-Given you've followed the steps in part 2 you should have some test data to explore, which can be done easily with some accelerator utilities.
+Given you've followed the steps in part 2 you should have some test data to explore, which can be done
+	easily with some accelerator utilities.
 - cd into accelerator_project_skeleton/accelerator
 - In the previous step you should've gotten some feedback such as this:
 
@@ -77,7 +83,8 @@ WORKSPACE:  Allocate_job "/home/localuseracc/accelerator/workdirs/TEST/TEST-1"
 | TEST-1 [csvimport]  completed. (  0.0s) |
 
 - 'TEST-1' (or whatever was created) is what we'll use with the utilities to explore the data
-- To use the utilities from the terminal we need to have access to accelerator specific libraries, so we need to activate the correct virtual environment before we proceed.
+- To use the utilities from the terminal we need to have access to accelerator specific libraries, so we need to activate
+	the correct virtual environment before we proceed.
 - Run the following to activate the python3 virtual environment:
 -- "source ../venv/py3/bin/activate"
 - Now run "./dsinfo TEST-1"
@@ -92,7 +99,8 @@ Columns:
 3 columns
 7 lines
 
-- As you can see the default behavior is to use the top column values as column names. By default the columns themselves are set to contain the data type 'bytes'.
+- As you can see the default behavior is to use the top column values as column names. By default the columns themselves
+	are set to contain the data type 'bytes'.
 - To explore the actual data we can use dsgrep, as such:
 -- dsgrep.py [options] pattern ds [ds [...]] [column [column [...]]
 -- As an example, this will search for rows with the value "value1": "./dsgrep.py "value1" TEST-1"
