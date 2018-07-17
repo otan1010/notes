@@ -44,7 +44,7 @@ First, however, we'll create a new folder structure from which we'll invoke csvi
 -- We can also change where the accelerator looks for data, so we'll do that as well:
 -- change the "source_directory=/some/other/path" to "source_directory=${HOME}".
 -- This will make the accelerators import methods look for data in your users home folder,
-	as specified by the unix environment variable$HOME.
+	as specified by the unix environment variable $HOME.
 - Then we need to create the dummy data, so create a file named 'test.csv' under your $HOME folder (run 'echo $HOME' in the
 	terminal if you're unsure where that is). Fill the file with some dummy data, as such:
 
