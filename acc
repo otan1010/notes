@@ -35,7 +35,7 @@ First, however, we'll create a new folder structure from which we'll invoke csvi
 - remove the dev folder and all its contents: "rm dev/*", "rmdir dev"
 - create a new folder named example1: "mkdir example1"
 - create a new file: "touch example1/methods.conf"
-- create a new file: "touch example1/a_example1.py"
+- create a new file: "touch example1/automata_example1.py"
 - create a new file: "touch example1/__init__.py"
 - edit conf/framework.conf
 -- the method directories should initially be set to: "method_directories=dev,standard_methods"
