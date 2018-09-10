@@ -131,10 +131,12 @@ value1  323243  value4
 
 1. cd accelerator_project_skeleton/accelerator
 2. mkdir database
-3. Create database/passwd with entry: "username:password"
-4. Add row to conf/framework.conf: "urd=http://localhost:8080"
+3. Create the file database/passwd with entry: "username:password" (Change it to your own users credentials.)
+4. Add row to ../conf/framework.conf: "urd=http://localhost:8080"
 5. run unix command: "export URD_AUTH='username:password'"
-6. run urd: "./urd.py --path database/"
+6. Activate the python 2 virtual environment: "source ../venv/py2/bin/activate"
+7. Install bottle: "pip install bottle"
+7. run urd: "./urd/urd.py --path database/"
 
 ----------------------------------------------
 ----------------------------------------------
