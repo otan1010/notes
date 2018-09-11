@@ -151,7 +151,7 @@ automata_example1.py =
 from datetime import datetime
 
 def main(urd):
-    now = datetime.now().strftime('%Y%m%d %H:%M:%S')
+    now = datetime.now().isoformat()
 
     urd.begin('connlog-raw', now)
 
