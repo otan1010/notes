@@ -102,7 +102,7 @@ Columns:
 3 columns
 7 lines
 
-- As you can see the default behavior is to use the top column values as column names. By default the columns themselves
+- As you can see the default behavior is to use the top row values as column names. By default the columns themselves
 	are set to contain the data type 'bytes'.
 - To explore the actual data we can use dsgrep, as such:
 -- dsgrep.py [options] pattern ds [ds [...]] [column [column [...]]
