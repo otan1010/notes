@@ -6,10 +6,10 @@ Follow these instructions:
 -- git clone https://github.com/eBay/accelerator-project_skeleton.git
 
 ----------------------------
--------- For CentOS --------
+--- For CentOS-8.2.2004 ----
 ----------------------------
 yum groupinstall 'Development Tools'
-yum install python-devel python34-devel zlib-devel git python-virtualenv python34-virtualenv
+yum install python36-devel
 
 ----------------------------
 -- 1. Verify installation --
